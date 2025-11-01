@@ -1,0 +1,120 @@
+/* ブラウザで設定されているスタイルのリセット・共通設定 */
+/* 消さないでください */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+/* スタイルのリセット終了 */
+
+/* サイドバーとメインコンテンツを包むための要素のスタイルを書いてください */
+.sidebar {
+  width: 256px;                    /* 幅を256pxにする */
+  flex-shrink: 0;                  /* 横幅が潰れないようにする */
+  background-color: #f5f5f5;       /* サイドバーの背景色 */
+  border-right: 1px solid #e0e0e0; /* 右側のボーダー */
+  display: flex;                   /* 中身を縦積みにしたいのでflex */
+  flex-direction: column;          /* 縦方向に並べる */
+  height: 100%;                    /* 親(dashboard-container)の高さに合わせる */
+}
+
+/* サイドバーに関連するスタイルを書いてください */
+.sidebar-header {
+  padding: 20px;                     /* 余白を20pxに設定 */
+  border-bottom: 1px solid #e0e0e0;  /* 下ボーダーを1px #e0e0e0で設定 */
+}
+
+.sidebar-header a {
+  font-size: 1.25rem;        /* フォントサイズ 1.25rem */
+  font-weight: 600;          /* フォントの太さ 600 */
+  color: #4f7cac;            /* 文字色 #4f7cac */
+  display: flex;             /* 横並びにする */
+  align-items: center;       /* 縦方向の中央揃え */
+  gap: 8px;                  /* アイコンとテキストの間隔 8px */
+  text-decoration: none;     /* 下線などの装飾を消す */
+}
+
+/* メインコンテンツに関連するスタイルを書いてください */
+body .dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* メインコンテンツ */
+.main {
+  flex: 1;               /* ← サイドバー以外の残り幅を全部使う */
+}
+
+/* #home の中のヘッダー部分 */
+.home-header {
+  background-color: #fff;              /* 背景を白に */
+  padding: 32px;                       /* 余白 */
+  border-bottom: 1px solid #e0e0e0;    /* 下ボーダー */
+  text-align: center;                  /* 中央揃え */
+}
+
+/* プロフィールアイコン */
+.profile-icon {
+  width: 96px;                /* 横幅を96pxに設定 */
+  height: 96px;               /* 高さを96pxに設定 */
+  background-color: #4f7cac;  /* 背景色を#4f7cacに設定 */
+  border-radius: 50%;         /* 円形にする */
+  display: flex;              /* 中央揃えにするためflexを指定 */
+  justify-content: center;    /* 水平方向の中央揃え */
+  align-items: center;        /* 垂直方向の中央揃え */
+  margin: 0 auto 24px;        /* 左右auto、下24pxの余白 */
+}
+
+/* プロフィールアイコン内のアイコン */
+.profile-icon span {
+  font-size: 2.5rem;          /* アイコンサイズを2.5remに */
+  color: #ffffff;             /* アイコンの色を白に */
+}
+
+/* タイトル */
+.home-header h1 {
+  font-size: 1.5rem;     /* フォントサイズを1.5remに設定 */
+  font-weight: 600;      /* フォントの太さを600に設定 */
+  color: #2f2f2f;        /* 文字色を#2f2f2fに設定 */
+  margin-bottom: 8px;    /* 要素の下に8pxの余白を設定 */
+}
+
+/* サブタイトル */
+.home-header .subtitle {
+  font-size: 1.125rem;   /* フォントサイズを1.125remに設定 */
+  color: #757575;        /* 文字色を#757575に設定 */
+  margin-bottom: 24px;   /* 下に24pxの余白を設定 */
+}
+
+/* メッセージ部分 */
+.home-message {
+  max-width: 672px;       /* メッセージ全体の最大幅を672pxに設定 */
+  margin: 0 auto;          /* 上下0、左右autoで中央寄せ */
+  padding: 32px;           /* 内側余白を32pxに設定 */
+  color: #757575;          /* 文字色を#757575に設定 */
+}
+
+/* 段落 */
+.home-message p {
+  margin-bottom: 16px;     /* 各段落の下に16pxの余白を設定 */
+}
